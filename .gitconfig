@@ -1,0 +1,17 @@
+[alias]
+	s = status
+	c = commit
+	check = checkout
+	b = branch
+	unstage = reset HEAD --
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
+	amend = commit --amend --no-edit
+	clear-branches = !git fetch | git branch --v | grep '\\[gone\\]' | awk '{print $1}' | xargs git branch -D
+    latest-tag = !git describe --abbrev=0
+[user]
+	name = Phablo Finotti
+	email = phablofinotti@gmail.com
+[core]
+	editor = code --wait
+[pull]
+	rebase = true
